@@ -1,34 +1,58 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect } from 'react';
+import LandingPage from './Pages/LandingPage';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import AOS from 'aos';
 import './App.css'
+import 'aos/dist/aos.css';
+import ServicesRequest from './components/ServicesRequest';
 
 function App() {
-  const [count, setCount] = useState(0)
+
+
+
+  useEffect(() => {
+    let sections = document.querySelectorAll(`section`);
+    let navlink = document.querySelectorAll(`header nav a`);
+
+    window.onscroll = () => {
+      sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute(`id`);
+
+
+        if (top >= offset && top < offset + height) {
+          navlink.forEach(links => {
+            links.classList.remove(`active`);
+            document.querySelector(`header nav a[href *= ${id}]`).classList.add(`active`)
+          })
+        }
+      });
+
+      let header = document.querySelector(`header`)
+
+      header.classList.toggle(`sticky`, window.onscroll > 100);
+    }
+  })
+
+  useEffect(() => {
+    AOS.init({
+
+      delay: 0, // values from 0 to 3000, with step 50ms
+      duration: 1000, // values from 0 to 3000, with step 50ms
+      easing: 'ease', // default easing for AOS animations
+      once: false,
+    })
+  })
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/Abdullah/" element={<LandingPage />} />
+        <Route path="/Abdullah/Services-request/" element={<ServicesRequest />} />
+      </Routes>
+    </Router >
   )
 }
 
