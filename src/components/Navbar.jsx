@@ -1,7 +1,6 @@
 export const Navbar = () => {
     return (
         <header className="header">
-            <a href="#" className="logo" data-aos="fade-right">Portfolio</a>
             <i className="bx bx-menu" id="menu-icon" />
             <nav className="navbar">
                 <a data-aos="fade-down" data-aos-delay="500" href="#home" className="active">Home</a>

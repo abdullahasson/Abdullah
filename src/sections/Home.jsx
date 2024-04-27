@@ -24,8 +24,6 @@ function Home() {
                             2000, // wait 1s before replacing "Mice" with "Hamsters"
                             'Freelancer',
                             2000,
-                            'Mern Stack',
-                            2000,
                         ]}
                         wrapper="span"
                         speed={50}

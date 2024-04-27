@@ -32,11 +32,11 @@ function Contact() {
                 data-aos="fade-up"
             >
                 <div className="input-box">
-                    <input type="text" name="from_name" placeholder="Full Name" />
-                    <input type="email" name="from_email" placeholder="Email Address" />
+                    <input required type="text" name="from_name" placeholder="Full Name" />
+                    <input required type="email" name="from_email" placeholder="Email Address" />
                 </div>
 
-                <textarea name="message" id cols={30} rows={10} placeholder="Your Message" defaultValue={""} />
+                <textarea required name="message" id cols={30} rows={10} placeholder="Your Message" defaultValue={""} />
                 <input type="submit" value="Send" className="btn" />
             </form>
         </section>
