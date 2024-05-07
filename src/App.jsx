@@ -22,12 +22,6 @@ function App() {
         let offset = sec.offsetTop - 150;
         let height = sec.offsetHeight;
         let id = sec.getAttribute(`id`);
-        // document.querySelector(`header nav a[href *= ${id}]`).classList.add(`active`)
-
-
-        // window.sessionStorage.setItem("top")
-
-        console.log(top, offset, height, id)
 
         if (top >= offset && top < offset + height) {
           navlink.forEach(links => {
