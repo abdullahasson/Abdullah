@@ -7,6 +7,7 @@ function About() {
             <div data-aos="zoom-in-right">
                 <img className="w-[200vw]" src={MYPhoto} alt />
             </div>
+
             <div className="about-content" data-aos="fade-right">
                 <h2 className="text-7xl text-left leading-[1.2]">About <span>Me</span></h2>
                 <h3 className="text-[2.6rem]">React js Developer</h3>
