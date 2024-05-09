@@ -3,7 +3,7 @@ import LandingPage from './Pages/LandingPage';
 import ServicesPage from './Pages/ServicesPage';
 import ProjectsPage from './Pages/ProjectsPage';
 import AboutPage from './Pages/AboutPage';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import AOS from 'aos';
 import './App.css'
 import 'aos/dist/aos.css';
@@ -48,14 +48,14 @@ function App() {
   })
 
   return (
-    <Router>
-      <Routes>
-        <Route path="/Abdullah/" element={<LandingPage />} />
-        <Route path="/Abdullah/Services/" element={<ServicesPage />} />
-        <Route path="/Abdullah/Projects/" element={<ProjectsPage />} />
-        <Route path="/Abdullah/About/" element={<AboutPage />} />
-      </Routes>
-    </Router >
+    // <Router>
+    <Routes>
+      <Route path="/Abdullah/" element={<LandingPage />} />
+      <Route path="/Abdullah/Services/" element={<ServicesPage />} />
+      <Route path="/Abdullah/Projects/" element={<ProjectsPage />} />
+      <Route path="/Abdullah/About/" element={<AboutPage />} />
+    </Routes>
+    // </Router >
   )
 }
 

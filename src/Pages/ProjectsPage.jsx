@@ -12,11 +12,11 @@ export default function ProjectsPage() {
                     <h1 className="font-bold">Projects</h1>
                 </div>
 
-
                 <ProjectsNav />
             </div>
 
-            <div className="h-screen">
+
+            <div className="h-screen bg-[var(--bg-color)]">
                 <Routes>
                     <Route path="/Abdullah/Projects/HooBank/" element={<HooBank />} />
                     <Route path="/Abdullah/Projects/BrainWave" element={<BrainWave />} />
