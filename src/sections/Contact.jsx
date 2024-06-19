@@ -24,8 +24,8 @@ function Contact() {
         e.preventDefault();
 
         emailjs
-            .sendForm(`${secrit.VITE_service_name}`, `${secrit.VITE_template_name}`, form.current, {
-                publicKey: `${secrit.VITE_publicKey}`,
+            .sendForm(`service_wkvbbdn`, `template_csp0owc`, form.current, {
+                publicKey: `Fp-bsNyp7ZHevdX6W`,
             })
             .then(
                 () => {
