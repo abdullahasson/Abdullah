@@ -12,20 +12,9 @@
 }
 
 * {
-  /* font-family: "Poppins", sans-serif; */
   font-family: "Poetsen One", sans-serif;
-  /* font-family: "Jaini Purva", system-ui; */
 }
 
-
-/* home image animation */
-/* .image-animation {
-  animation-name: top-bottom;
-  animation-duration: 5s;
-  animation-timing-function: linear;
-  animation-direction: alternate-reverse;
-  animation-iteration-count: infinite;
-} */
 
 .image-animation {
   top: 0
@@ -43,294 +32,127 @@
   }
 }
 
-/* .about {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  background-color: var(--second-bg-color);
+
+
+/* Copy button */
+
+/* tooltip settings 👇 */
+
+.copy {
+  /* button */
+  --button-bg: #353434;
+  --button-hover-bg: #464646;
+  --button-text-color: #CCCCCC;
+  --button-hover-text-color: #8bb9fe;
+  --button-border-radius: 10px;
+  --button-diameter: 36px;
+  --button-outline-width: 1px;
+  --button-outline-color: rgb(141, 141, 141);
+  /* tooltip */
+  --tooltip-bg: #f4f3f3;
+  --toolptip-border-radius: 4px;
+  --tooltip-font-family: Menlo, Roboto Mono, monospace;
+  /* 👆 this field should not be empty */
+  --tooltip-font-size: 12px;
+  /* 👆 this field should not be empty */
+  --tootip-text-color: rgb(50, 50, 50);
+  --tooltip-padding-x: 7px;
+  --tooltip-padding-y: 7px;
+  --tooltip-offset: 8px;
+  /* --tooltip-transition-duration: 0.3s; */
+  /* 👆 if you need a transition, 
+  just remove the comment,
+  but I didn't like the transition :| */
 }
 
-.about .about-img img {
-  width: 30vw;
-}
-
-.about .heading {
-  text-align: center;
-  font-size: 4.5rem;
-}
-
-.about .about-content h2 {
-  text-align: left;
-  line-height: 1.2;
-}
-
-.about .about-content h3 {
-  font-size: 2.6rem;
-}
-
-.about .about-content p {
-  font-size: 1.6rem;
-  margin: 2rem 0 3rem;
-} */
-/* .services {
-  position: relative;
-}
-
-.services .heading {
-  margin-bottom: 5rem;
-  text-align: center;
-  font-size: 3.6rem;
-}
-
-.services .services-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.services .services-container .services-box {
-  flex: 1 1 30rem;
-  background-color: var(--second-bg-color);
-  padding: 3rem 2rem 4rem;
-  border-radius: 2rem;
-  text-align: center;
-  border: 0.2rem solid var(--bg-color);
-  transition: 0.5s ease;
-  -webkit-transition: 0.5s ease;
-  -moz-transition: 0.5s ease;
-  -ms-transition: 0.5s ease;
-  -o-transition: 0.5s ease;
-}
-
-.services .services-container .services-box i {
-  font-size: 7rem;
-  color: var(--main-color);
-}
-
-.services .services-container .services-box h3 {
-  font-size: 2.6rem;
-}
-
-.services .services-container .services-box p {
-  font-size: 1.6rem;
-  margin: 1rem 0 3rem;
-}
-
-.services .services-container .services-box:hover {
-  border-color: var(--main-color);
-  transform: scale(1.02);
-  -webkit-transform: scale(1.02);
-  -moz-transform: scale(1.02);
-  -ms-transform: scale(1.02);
-  -o-transform: scale(1.02);
-}
-
-.services-template {
-  position: absolute;
-  background-color: #0ef;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
-} */
-
-/* .portfolio {
-  position: relative;
-  background-color: var(--second-bg-color);
+.copy {
+  box-sizing: border-box;
+  width: var(--button-diameter);
+  height: var(--button-diameter);
+  border-radius: var(--button-border-radius);
+  background-color: var(--button-bg);
+  color: var(--button-text-color);
+  border: none;
   cursor: pointer;
-}
-
-.portfolio h2 {
-  margin-bottom: 4rem;
-  font-size: 3.6rem;
-  text-align: center;
-}
-
-.portfolio .portfolio-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  gap: 2.5rem;
-}
-
-.portfolio .portfolio-container .portfolio-box {
   position: relative;
-  min-height: 290px;
-  box-shadow: 0 0 1rem var(--bg-color);
-  overflow: hidden;
-  display: flex;
-  border-radius: 2rem;
-  -webkit-border-radius: 2rem;
-  -moz-border-radius: 2rem;
-  -ms-border-radius: 2rem;
-  -o-border-radius: 2rem;
+  outline: none;
 }
 
-.portfolio .portfolio-container .portfolio-box img {
-  width: 100%;
-  transition: 0.5s ease;
-  -webkit-transition: 0.5s ease;
-  -moz-transition: 0.5s ease;
-  -ms-transition: 0.5s ease;
-  -o-transition: 0.5s ease;
-  z-index: 2;
-}
-
-.portfolio .portfolio-container .portfolio-box .portfolio-layer {
+.tooltip {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.01), var(--main-color));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 0 4rem;
-  transform: translateY(100%);
-  -webkit-transform: translateY(100%);
-  -moz-transform: translateY(100%);
-  -ms-transform: translateY(100%);
-  -o-transform: translateY(100%);
-  transition: 0.5s ease;
-}
-
-.portfolio .portfolio-container .portfolio-box .portfolio-layer h4 {
-  font-size: 3rem;
-}
-
-.portfolio .portfolio-container .portfolio-box .portfolio-layer p {
-  font-size: 1.6rem;
-  margin: 0.3rem 0 1rem;
-}
-
-.portfolio .portfolio-container .portfolio-box .portfolio-layer a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 5rem;
-  height: 5rem;
-  background: var(--text-color);
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-}
-
-.portfolio .portfolio-container .portfolio-box .portfolio-layer a i {
-  font-size: 2rem;
-  color: var(--second-bg-color);
-}
-
-.portfolio .portfolio-container .portfolio-box:hover .portfolio-layer {
-  transform: translateY(0);
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -o-transform: translateY(0);
-}
-
-.portfolio .project-template {
-  width: 100%;
-  min-height: 100vh;
-  background-color: var(--bg-color);
-  position: absolute;
+  opacity: 0;
+  visibility: 0;
+  top: 0;
   left: 50%;
-  top: 50%;
-  z-index: 999999;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-}
-
-.portfolio .project-template .title {
-  text-align: center;
-  padding: 30px;
-  width: 100%;
-}
-
-.portfolio .project-template .image {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.portfolio .more {
-  position: absolute;
-  bottom: 55px;
-  left: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-} */
-
-/* .contact h2 {
-  margin-bottom: 0rem;
-  text-align: center;
-  font-size: 3.6rem;
+  white-space: nowrap;
+  font: var(--tooltip-font-size) var(--tooltip-font-family);
+  color: var(--tootip-text-color);
+  background: var(--tooltip-bg);
+  padding: var(--tooltip-padding-y) var(--tooltip-padding-x);
+  border-radius: var(--toolptip-border-radius);
+  pointer-events: none;
+  transition: all var(--tooltip-transition-duration) cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.contact form {
-  max-width: 70rem;
-  margin: 1rem auto;
-  text-align: center;
-  margin-bottom: 3rem;
+.tooltip::before {
+  content: attr(data-text-initial);
 }
 
-.contact form .input-box {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: calc(var(--tooltip-padding-y) / 2 * -1);
+  width: var(--tooltip-padding-y);
+  height: var(--tooltip-padding-y);
+  background: inherit;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  z-index: -999;
+  pointer-events: none;
 }
 
-.contact form .input-box input {
-  width: 49%;
-  padding: 1rem;
-  font-size: 1.6rem;
-  color: var(--text-color);
-  background: var(--second-bg-color);
-  margin: 0.7rem 0;
-  border-radius: 0.8rem;
-  -webkit-border-radius: 0.8rem;
-  -moz-border-radius: 0.8rem;
-  -ms-border-radius: 0.8rem;
-  -o-border-radius: 0.8rem;
+.copy svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.contact form textarea {
-  width: 100%;
-  padding: 1.5rem;
-  font-size: 1.6rem;
-  color: var(--text-color);
-  background: var(--second-bg-color);
-  margin: 0.7rem 0;
-  border-radius: 0.8rem;
-  -webkit-border-radius: 0.8rem;
-  -moz-border-radius: 0.8rem;
-  -ms-border-radius: 0.8rem;
-  -o-border-radius: 0.8rem;
-  resize: none;
+.checkmark {
+  display: none;
 }
 
-.contact form .btn {
-  margin-top: 2rem;
-  cursor: pointer;
-} */
+/* actions */
+
+.copy:hover .tooltip,
+.copy:focus:not(:focus-visible) .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: calc((100% + var(--tooltip-offset)) * -1);
+}
+
+.copy:focus:not(:focus-visible) .tooltip::before {
+  content: attr(data-text-end);
+}
+
+.copy:focus:not(:focus-visible) .clipboard {
+  display: none;
+}
+
+.copy:focus:not(:focus-visible) .checkmark {
+  display: block;
+}
+
+.copy:hover,
+.copy:focus {
+  background-color: var(--button-hover-bg);
+}
+
+.copy:active {
+  outline: var(--button-outline-width) solid var(--button-outline-color);
+}
+
+.copy:hover svg {
+  color: var(--button-hover-text-color);
+}
