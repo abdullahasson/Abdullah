@@ -45,39 +45,39 @@ function Contact() {
         <section className="contact flex flex-col justify-center items-center" id="contact">
             <h2 className="heading text-center text-[3.6rem] mb-2" data-aos="fade-down">Contact <span>Me!</span></h2>
 
-            <div className='flex justify-between items-center w-full px-6 mt-2 rounded-xl'>
+            <div className='flex justify-between items-center w-[90%] px-6 mt-2 rounded-xl'>
                 <div className="flex flex-col gap-y-11 w-[350px]">
-                    <div className="relative flex items-center justify-between whatsapp cursor-pointer p-6 rounded-lg bg-[var(--second-bg-color)]">
+                    <div data-aos="fade-right" data-aos-delay="100" className="relative flex items-center justify-between whatsapp cursor-pointer p-6 rounded-lg bg-[var(--second-bg-color)]">
                         <div className="title py-2 text-[22px]">
                             WhatsApp :
                         </div>
                         
 
-                        <div className="text-[18px] text-[var(--main-color)]">
+                        <div className="text-[18px] text-[var(--text-color)]">
                             +963 932 680 992
                         </div>
 
                         <Copy text="+963 932 680 992" className="absolute -right-16 " />
                     </div>
 
-                    <div className="relative flex items-center justify-between whatsapp cursor-pointer p-6 rounded-lg bg-[var(--second-bg-color)]">
+                    <div data-aos="fade-right" data-aos-delay="250" className="relative flex items-center justify-between whatsapp cursor-pointer p-6 rounded-lg bg-[var(--second-bg-color)]">
                         <div className="title py-2 text-[22px] ">
                             Telegram :
                         </div>
                         
-                        <div className="text-[18px] text-[var(--main-color)]">
+                        <div className="text-[18px] text-[var(--text-color)]">
                             @abdullahasson
                         </div>
 
                         <Copy text="@abdullahasson" className="absolute -right-16 " />
                     </div>
 
-                    <div className="relative flex items-center justify-between whatsapp cursor-pointer p-6 rounded-lg bg-[var(--second-bg-color)]">
+                    <div data-aos="fade-right" data-aos-delay="350" className="relative flex items-center justify-between whatsapp cursor-pointer p-6 rounded-lg bg-[var(--second-bg-color)]">
                         <div className="title py-2 text-[22px] ">
                             Email :
                         </div>
                         
-                        <div className="text-[18px] text-[var(--main-color)]">
+                        <div className="text-[18px] text-[var(--text-color)]">
                             bh532997@gmail.com
                         </div>
 
@@ -90,7 +90,7 @@ function Contact() {
                 <form
                     ref={form}
                     onSubmit={sendEmail}
-                    data-aos="fade-up"
+                    data-aos="fade-left"
                     className='w-[400px] text-center'
                 >
                     <div className="flex-col flex">

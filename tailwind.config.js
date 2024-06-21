@@ -26,7 +26,7 @@ export default {
         },
 
         "body": {
-          "@apply bg-[var(--bg-color)] text-[var(--text-color)] overflow-hidden": {}
+          "@apply bg-[var(--bg-color)] text-[var(--text-color)]": {}
         },
 
         "section": {
@@ -34,7 +34,7 @@ export default {
         },
 
         ".btn": {
-          "@apply inline-block shadow-[0_0_1rem_var(--main-color)] text-[1.6rem] text-[color:var(--second-bg-color)] tracking-[0.1rem] font-semibold px-[2.8rem] py-4 rounded-[4rem] hover:shadow-none bg-[var(--main-color)]": {},
+          "@apply inline-block text-[1.6rem] text-[color:var(--second-bg-color)] tracking-[0.1rem] font-semibold px-[2.8rem] py-4 rounded-[4rem] hover:shadow-none bg-[var(--main-color)]": {},
         },
 
         ".active": {

@@ -156,3 +156,60 @@
 .copy:hover svg {
   color: var(--button-hover-text-color);
 }
+
+
+
+.lngs {
+  position: absolute;
+  left: calc(-100% );
+  top: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  background-color: #0D1117;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.lngs .value {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  color: white;
+  display: flex;
+  position: relative;
+  gap: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.lngs .value:not(:active):hover,
+.lngs .value:focus {
+  background-color: #21262C;
+}
+
+.lngs .value:focus,
+.lngs .value:active {
+  background-color: #1A1F24;
+  outline: none;
+}
+
+.lngs .value::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -10px;
+  width: 5px;
+  height: 80%;
+  background-color: var(--main-color);
+  border-radius: 5px;
+  opacity: 0;
+}
+
+.lngs .value:focus::before,
+.lngs .value:active::before {
+  opacity: 1;
+}
