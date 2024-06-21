@@ -23,7 +23,7 @@ i18n
   .use(HttpApi)
   .init({
     backend: {
-      loadPath : '/Abdullah/public/locale/{{lng}}/translation.json',
+      loadPath : '/locale/{{lng}}/translation.json',
     },
     fallbackLng: "en",
     detection: {
