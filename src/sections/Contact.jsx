@@ -1,10 +1,13 @@
 import { useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
 import { Toaster, toast } from 'sonner'
 import Copy from "../components/copy"
 
 
 function Contact() {
+
+    const { t } = useTranslation()
 
     const secrit = import.meta.env
 
@@ -43,13 +46,13 @@ function Contact() {
 
     return (
         <section className="contact flex flex-col justify-center items-center" id="contact">
-            <h2 className="heading text-center text-[3.6rem] mb-2" data-aos="fade-down">Contact <span>Me!</span></h2>
+            <h2 className="heading text-center text-[3.6rem] mb-2" data-aos="fade-down">{t("contact")} <span>{t("Mi")}</span></h2>
 
             <div className='flex justify-between items-center w-[90%] px-6 mt-2 rounded-xl'>
                 <div className="flex flex-col gap-y-11 w-[350px]">
-                    <div data-aos="fade-right" data-aos-delay="100" className="relative flex items-center justify-between whatsapp cursor-pointer p-6 rounded-lg bg-[var(--second-bg-color)]">
+                    <div data-aos="fade-right" data-aos-delay="100" className="relative flex items-center justify-between p-6 rounded-lg bg-[var(--second-bg-color)]">
                         <div className="title py-2 text-[22px]">
-                            WhatsApp :
+                            {t("WhatsApp")} :
                         </div>
                         
 
@@ -60,9 +63,9 @@ function Contact() {
                         <Copy text="+963 932 680 992" className="absolute -right-16 " />
                     </div>
 
-                    <div data-aos="fade-right" data-aos-delay="250" className="relative flex items-center justify-between whatsapp cursor-pointer p-6 rounded-lg bg-[var(--second-bg-color)]">
+                    <div data-aos="fade-right" data-aos-delay="250" className="relative flex items-center justify-between p-6 rounded-lg bg-[var(--second-bg-color)]">
                         <div className="title py-2 text-[22px] ">
-                            Telegram :
+                            {t("Telegram")} :
                         </div>
                         
                         <div className="text-[18px] text-[var(--text-color)]">
@@ -72,9 +75,9 @@ function Contact() {
                         <Copy text="@abdullahasson" className="absolute -right-16 " />
                     </div>
 
-                    <div data-aos="fade-right" data-aos-delay="350" className="relative flex items-center justify-between whatsapp cursor-pointer p-6 rounded-lg bg-[var(--second-bg-color)]">
+                    <div data-aos="fade-right" data-aos-delay="350" className="relative flex items-center justify-between p-6 rounded-lg bg-[var(--second-bg-color)]">
                         <div className="title py-2 text-[22px] ">
-                            Email :
+                            {t("Email")} :
                         </div>
                         
                         <div className="text-[18px] text-[var(--text-color)]">
@@ -85,8 +88,6 @@ function Contact() {
                     </div>
                 </div>
 
-                <div className='h-full w-2 bg-slate-200 block' />
-
                 <form
                     ref={form}
                     onSubmit={sendEmail}
@@ -94,12 +95,12 @@ function Contact() {
                     className='w-[400px] text-center'
                 >
                     <div className="flex-col flex">
-                        <input ref={name} className='w-full text-[1.6rem] text-[color:var(--text-color)] mx-0 my-[0.7rem] p-4 rounded-[0.8rem] bg-[var(--second-bg-color)]' required type="text" name="from_name" placeholder="Full Name" />
-                        <input ref={email} className='w-full text-[1.6rem] text-[color:var(--text-color)] mx-0 my-[0.7rem] p-4 rounded-[0.8rem] bg-[var(--second-bg-color)]' required type="email" name="from_email" placeholder="Email Address" />
+                        <input ref={name} className='w-full text-[1.6rem] text-[color:var(--text-color)] mx-0 my-[0.7rem] p-4 rounded-[0.8rem] bg-[var(--second-bg-color)]' required type="text" name="from_name" placeholder={t("inputName")} />
+                        <input ref={email} className='w-full text-[1.6rem] text-[color:var(--text-color)] mx-0 my-[0.7rem] p-4 rounded-[0.8rem] bg-[var(--second-bg-color)]' required type="email" name="from_email" placeholder={t("inputEmail")} />
                     </div>
 
-                    <textarea ref={message} className='bg-[var(--second-bg-color)] w-full text-[1.6rem] text-[color:var(--text-color)] resize-none mx-0 my-[0.7rem] p-6 rounded-[0.8rem]' required name="message" id cols={30} rows={10} placeholder="Your Message" defaultValue={""} />
-                    <input type="submit" value="Send" className="btn cursor-pointer mt-2" />
+                    <textarea ref={message} className='bg-[var(--second-bg-color)] w-full text-[1.6rem] text-[color:var(--text-color)] resize-none mx-0 my-[0.7rem] p-6 rounded-[0.8rem]' required name="message" id cols={30} rows={10} placeholder={t("inputMessage")} defaultValue={""} />
+                    <input type="submit" value={t("send")} className="btn cursor-pointer mt-2" />
                 </form>
             </div>
 

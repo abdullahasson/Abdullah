@@ -1,4 +1,5 @@
 // import { useState } from "react"
+import { useTranslation } from "react-i18next"
 import { BlurhashCanvas } from "react-blurhash"
 import { Link } from "react-router-dom"
 import { ProfilePhoto } from "../assets"
@@ -6,9 +7,11 @@ import { ProfilePhoto } from "../assets"
 
 function Profile() {
 
+    const {t} = useTranslation()
+
     return (
-        <section className="relative bg-[color:var(--second-bg-color)] cursor-pointer" id="portfolio">
-            <h2 className="heading text-[3.6rem] text-center mb-16" data-aos="fade-down">Latest <span>Project</span></h2>
+        <section className="relative bg-[color:var(--second-bg-color)]" id="portfolio">
+            <h2 className="heading text-[3.6rem] text-center mb-16" data-aos="fade-down">{t("Latest")} <span>{t("Project")}</span></h2>
             <div className="grid grid-cols-[repeat(3,1fr)] items-center gap-10">
                 <div className="relative min-h-[290px] shadow-[0_0_1rem_var(--bg-color)] overflow-hidden flex rounded-[2rem]" data-aos="fade-down">
                     <img className="w-full transition-[0.5s] duration-[ease] z-[2]" src={ProfilePhoto.hoobank} alt />
@@ -59,7 +62,7 @@ function Profile() {
             </div>
 
             <div className="absolute flex justify-center items-center -translate-x-2/4 left-2/4 bottom-[55px]">
-                <Link className="btn" to="/Abdullah/Projects/">More</Link>
+                <Link className="btn" to="/Abdullah/Projects/">{t("more")}</Link>
             </div>
 
         </section>

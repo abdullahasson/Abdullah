@@ -19,15 +19,6 @@ const ChangeLng = () => {
                         <button className="value" onClick={() => {i18n.changeLanguage("en")}}>
                             English
                         </button>
-                        <button className="value">
-                            español
-                        </button>
-                        <button className="value">
-                            Accessibility
-                        </button>
-                        <button className="value">
-                            Notifications
-                        </button>
                     </div>
                 )
             }
