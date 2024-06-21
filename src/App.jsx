@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import i18n from "i18next";
-import { useTranslation, initReactI18next } from "react-i18next";
+import { initReactI18next } from "react-i18next";
 import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpApi from 'i18next-http-backend';
 import cookies from "js-cookie"
@@ -22,9 +22,6 @@ i18n
   .use(LanguageDetector)
   .use(HttpApi)
   .init({
-    backend: {
-      loadPath : '/locale/{{lng}}/translation.json',
-    },
     fallbackLng: "en",
     detection: {
       order: [  
@@ -40,11 +37,14 @@ i18n
         caches: ["cookie"]
     },
 
+    backend: {
+      loadPath : '/Abdullah/locale/{{lng}}/translation.json',
+    },
+
 });
 
 function App() {
 
-  const { t } = useTranslation()
   const lng = cookies.get("i18next") || "en"
 
 
