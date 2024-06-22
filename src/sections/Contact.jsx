@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
 import { Toaster, toast } from 'sonner'
-import Copy from "../components/copy"
+// import Copy from "../components/copy"
 
 
 function Contact() {
@@ -60,7 +60,7 @@ function Contact() {
                             +963 932 680 992
                         </div>
 
-                        <Copy text="+963 932 680 992" className="absolute -right-16 " />
+                        {/* <Copy text="+963 932 680 992" className="absolute -right-16 " /> */}
                     </div>
 
                     <div data-aos="fade-right" data-aos-delay="250" className="relative flex items-center justify-between p-6 rounded-lg bg-[var(--second-bg-color)]">
@@ -72,7 +72,7 @@ function Contact() {
                             @abdullahasson
                         </div>
 
-                        <Copy text="@abdullahasson" className="absolute -right-16 " />
+                        {/* <Copy text="@abdullahasson" className="absolute -right-16 " /> */}
                     </div>
 
                     <div data-aos="fade-right" data-aos-delay="350" className="relative flex items-center justify-between p-6 rounded-lg bg-[var(--second-bg-color)]">
@@ -84,7 +84,7 @@ function Contact() {
                             bh532997@gmail.com
                         </div>
 
-                        <Copy text="bh532997@gmail.com" className="absolute -right-16 " />
+                        {/* <Copy text="bh532997@gmail.com" className="absolute -right-16 " /> */}
                     </div>
                 </div>
 

@@ -30,9 +30,8 @@ function Home() {
                             (
                                 <TypeAnimation
                                 sequence={[
-                                    // Same substring at the start will only be typed out once, initially
                                     `React js Developer`,
-                                    2000, // wait 1s before replacing "Mice" with "Hamsters"
+                                    2000, 
                                     `Freelancer`,
                                     2000,
                                 ]}
