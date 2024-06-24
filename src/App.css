@@ -19,6 +19,11 @@
   font-family: "Cairo", sans-serif;
 }
 
+
+section {
+  overflow: hidden !important;
+}
+
 p {
   font-size: 18px !important;
   line-height: 1.7;

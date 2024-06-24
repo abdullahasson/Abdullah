@@ -12,7 +12,7 @@ function Profile() {
     return (
         <section className="relative bg-[color:var(--second-bg-color)]" id="portfolio">
             <h2 className="heading text-[3.6rem] text-center mb-16" data-aos="fade-down">{t("Latest")} <span>{t("Project")}</span></h2>
-            <div className="grid grid-cols-[repeat(3,1fr)] items-center gap-10">
+            <div className="grid grid-cols-[repeat(3,1fr)] items-center gap-10 max-[768px]:grid-cols-[repeat(1,1fr)]">
                 <div className="relative min-h-[290px] shadow-[0_0_1rem_var(--bg-color)] overflow-hidden flex rounded-[2rem]" data-aos="fade-down">
                     <img className="w-full transition-[0.5s] duration-[ease] z-[2]" src={ProfilePhoto.hoobank} alt />
                     <BlurhashCanvas

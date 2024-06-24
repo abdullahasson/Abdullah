@@ -9,6 +9,7 @@ import { Routes, Route } from "react-router-dom"
 import AOS from 'aos';
 import './App.css'
 import 'aos/dist/aos.css';
+import "./AppResponsive.css"
 
 
 
@@ -52,7 +53,7 @@ function App() {
       delay: 0, 
       duration: 1000, 
       easing: 'ease', 
-      once: false,
+      once: true,
     })
   })
 

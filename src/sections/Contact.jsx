@@ -48,7 +48,7 @@ function Contact() {
         <section className="contact flex flex-col justify-center items-center" id="contact">
             <h2 className="heading text-center text-[3.6rem] mb-2" data-aos="fade-down">{t("contact")} <span>{t("Mi")}</span></h2>
 
-            <div className='flex justify-between items-center w-[90%] px-6 mt-2 rounded-xl'>
+            <div className='flex justify-between items-center w-[90%] px-6 mt-2 rounded-xl max-[768px]:flex-col-reverse max-[768px]:gap-11'>
                 <div className="flex flex-col gap-y-11 w-[350px]">
                     <div data-aos="fade-right" data-aos-delay="100" className="relative flex items-center justify-between p-6 rounded-lg bg-[var(--second-bg-color)]">
                         <div className="title py-2 text-[22px]">
@@ -56,7 +56,7 @@ function Contact() {
                         </div>
                         
 
-                        <div className="text-[18px] text-[var(--text-color)]">
+                        <div dir='ltr' className="text-[18px] text-[var(--text-color)]">
                             +963 932 680 992
                         </div>
 
@@ -68,7 +68,7 @@ function Contact() {
                             {t("Telegram")} :
                         </div>
                         
-                        <div className="text-[18px] text-[var(--text-color)]">
+                        <div dir='ltr' className="text-[18px] text-[var(--text-color)]">
                             @abdullahasson
                         </div>
 
@@ -80,7 +80,7 @@ function Contact() {
                             {t("Email")} :
                         </div>
                         
-                        <div className="text-[18px] text-[var(--text-color)]">
+                        <div dir='ltr' className="text-[18px] text-[var(--text-color)]">
                             bh532997@gmail.com
                         </div>
 
