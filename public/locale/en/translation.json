@@ -1,12 +1,8 @@
 {
-
-    "more" : "More",
-
-
     "nav1" : "Home",
-    "nav2" : "About",
-    "nav3" : "Services",
-    "nav4" : "Portfolio",
+    "nav2" : "Expertise",
+    "nav3" : "Projects",
+    "nav4" : "Reviews",
     "nav5" : "Contact",
 
     "welcome" : "Hello, It`s Me",
@@ -14,41 +10,26 @@
     "And" : "And I`m a",
     "job1" : "React js Developer",
     "job2" : "Freelancer" ,
-    "where and age" : "from syria , I am 18 years old",
-    "CV" : "Download CV",
+    "job3" : "Front End Developer",
+    "where and age" : "Based in Hama, Syria, I'm passionate about creating engaging, digital experiences on the web.",
 
 
-    "about" : "A highly motivated, ultimately dedicated web designer who is motivated to constantly learn. I love creating technology that makes a difference through beautiful designs. In order to achieve this, I consider all the details that will attract users to interact and feel thrilled about their experience with the products I create. What I love and always get most excited about is how I can turn a blank canvas of open creative space for ideas into something that serves a meaningful purpose using design, web (or any) techniques and critical thinking. Additionally, I have a very strange habit of constantly trying to bring things and integrate them into the web to make them interactive and user-friendly. Simply put, I love creativity; Technology and design are the only tools of expression for me",
-
-    "aboutme" : "About" ,
-    "me" : "me",
-
-    "My" : "My",
-
-    "services" : "services",
-
-    "services1" : "Web Development",
-
-    "services1caption" : "Are you looking for distinct development solutions that exceed your expectations? Look no further! I am a skilled and experienced developer here to bring your ideas to life. Whether you need web development, mobile app development, or custom software solutions, I have you covered. I pride myself on my dedication to providing innovative, high-quality development services that not only meet your needs, but exceed them. With my personal approach and attention to detail, I ensure each project is completed to perfection. Donّt settle for normal. Choose my freelance services for exceptional development solutions that will impress your clients and keep them coming back for more. Let me help you take your business to the next level today!",
-
-    "requestServices" : "Request the service",
+    "expertiseTitle" : "Expertise",
+    "expertiseText" : "Discover my arsenal of frontend tools & technologies — React, Redux . From UI libraries like Material UI & shadcn/ui to custom animations using GSAP, I deliver stunning user experiences.",
+    "expertiseListTitle": "Full list of tools and technologies I use",
 
 
-    "Latest" : "Latest",
+    "projectsTitle" : "Projects",
+    "projectsText" : "A concise overview of selected frontend development projects, showcasing skills and capabilities. If you want to check my actual frontend skills, let`s get a call",
 
-    "Project" : "Project",
+
+    "reviewsTitle" : "Reviews",
+    "reviewsText" : "See what my past colleagues, managers and clients have to say about my frontend development skills.",
 
 
-    "Mi" : "Me" ,
-    "contact" : "Contact",
-
-    "WhatsApp" : "WhatsApp",
-    "Telegram" : "Telegram",
-    "Email" : "Email",
-
+    "contactTitle" : "Contact",
     "inputName" : "Full Name",
     "inputEmail" : "Email Address",
     "inputMessage" : "Your Message",
-
     "send" : "Send"
 } 

@@ -1,16 +1,20 @@
+// react
 import { useEffect } from 'react';
+import LandingPage from './Pages/LandingPage';
+// i18next
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpApi from 'i18next-http-backend';
+// cookies
 import cookies from "js-cookie"
-import LandingPage from './Pages/LandingPage';
+// page
 import { Routes, Route } from "react-router-dom"
+// aos
 import AOS from 'aos';
+// style
 import './App.css'
 import 'aos/dist/aos.css';
-import "./AppResponsive.css"
-
 
 
 i18n
@@ -52,7 +56,7 @@ function App() {
     AOS.init({
       delay: 0, 
       duration: 1000, 
-      easing: 'ease', 
+      easing: 'ease-out', 
       once: true,
     })
   })

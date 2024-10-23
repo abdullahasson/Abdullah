@@ -1,20 +1,29 @@
-import { Navbar } from '../components/Navbar'
+// components
+import Header from '../components/Header'
+// sections
 import Home from '../sections/Home'
-import About from '../sections/About'
-import Services from '../sections/Services'
-import Profile from '../sections/Profile'
+import Expertise from '../sections/Expertise'
+import Projects from '../sections/Projects'
+// import Reviews from '../sections/Reviews'
 import Contact from '../sections/Contact'
+import Footer from '../sections/Footer'
 
 
 function LandingPage() {
     return (
         <>
-            <Navbar />
+            <Header />
             <Home />
-            <About />
-            <Services />
-            <Profile />
-            <Contact />
+            <hr />
+            <Expertise />
+            <hr />
+            <Projects />
+            <hr />
+            {/* <Reviews />
+            <hr /> */}
+            <Contact /> 
+            <hr />
+            <Footer />
         </>
     )
 }

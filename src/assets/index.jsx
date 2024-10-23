@@ -1,18 +1,30 @@
 // Home Photo
-import MyPhoto from "./MyPhoto.png"
+import bg from "./image/bg.jpg"
+import MyPhoto from "./image/MyPhoto.png"
 // Profile Photo
-import HooBank from "./HooBank.png"
-import BrainWave from "./BrainWave (2).png"
-import ToDo from "./ToDo(1).jpg"
+import HooBank from "./image/HooBank.png"
+import BrainWave from "./image/brainwave.png"
+import Hubqoute from "./image/hubqoute.jpg"
+import ToDo from "./image/ToDo(1).jpg"
 
 
 export const HomePhoto = {
-    myphoto: MyPhoto
+    myphoto: MyPhoto,
+    bg: bg,
+
+    // hashs
+    myphotoHash: "L66*%X4T?cM|?w9Ex]o#tQW?jEt7",
+    bgHash: "LDFi40m6^%%NGdZfx_IoMvx]S*Dh"
 }
 
-export const ProfilePhoto = {
+export const projectsPhoto = {
     hoobank: HooBank,
-    hoobankHash: "L66*%X4T?cM|?w9Ex]o#tQW?jEt7",
     brainwave: BrainWave,
-    todo: ToDo
+    todo: ToDo,
+    hubqoute: Hubqoute,
+    
+    // Hash
+    hoobankHash: "L66*%X4T?cM|?w9Ex]o#tQW?jEt7",
+    brainwaveHash: "L47n8+-;0x-pD%IoNGt70K-;~DE1",
+    hubqouteHash: "LnJbHn~q4nIUbbn%ofWV9FM{x]of"
 }

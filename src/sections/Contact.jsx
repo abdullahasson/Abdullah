@@ -1,108 +1,63 @@
-import { useRef } from 'react';
+// react
+import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import emailjs from '@emailjs/browser';
+import { useForm } from 'react-hook-form';
+// email js
+import {send , init} from '@emailjs/browser';
+// components
+import Title from '../components/Title';
 import { Toaster, toast } from 'sonner'
-// import Copy from "../components/copy"
 
 
 function Contact() {
 
     const { t } = useTranslation()
 
-    const secrit = import.meta.env
+    useEffect(() => {
+        init('Fp-bsNyp7ZHevdX6W');
+    } , [])
 
-    const form = useRef();
-    const name = useRef();
-    const email = useRef();
-    const message = useRef();
+    const { register , handleSubmit , reset } = useForm()
 
-    function ClearInputs(isSucces, whYfailed) {
-        name.current.value = ''
-        email.current.value = ''
-        message.current.value = ''
-
-        isSucces ? toast.success('Sent') : toast.error(whYfailed)
+    const onSubmit = (data) => {
+        send('service_wkvbbdn', 'template_csp0owc', data)
+        .then((response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          reset(); // Reset the form after successful submission
+        })
+        .catch((err) => {
+          console.error('FAILED...', err);
+        });
     }
 
-    const sendEmail = (e) => {
-        e.preventDefault();
-
-        emailjs
-            .sendForm(`service_wkvbbdn`, `template_csp0owc`, form.current, {
-                publicKey: `Fp-bsNyp7ZHevdX6W`,
-            })
-            .then(
-                () => {
-                    console.log('SUCCESS!');
-                    ClearInputs(true)
-                },
-                (error) => {
-                    console.log('FAILED...', error.text);
-                    ClearInputs(false, error.text)
-                },
-            );
-    };
-
-
     return (
-        <section className="contact flex flex-col justify-center items-center" id="contact">
-            <h2 className="heading text-center text-[3.6rem] mb-2" data-aos="fade-down">{t("contact")} <span>{t("Mi")}</span></h2>
+        <section className="contact flex flex-col justify-center items-center pt-16" id="contact">
+            <Title 
+                text={t('contactTitle')}
+            />
 
-            <div className='flex justify-between items-center w-[90%] px-6 mt-2 rounded-xl max-[768px]:flex-col-reverse max-[768px]:gap-11'>
-                <div className="flex flex-col gap-y-11 w-[350px]">
-                    <div data-aos="fade-right" data-aos-delay="100" className="relative flex items-center justify-between p-6 rounded-lg bg-[var(--second-bg-color)]">
-                        <div className="title py-2 text-[22px]">
-                            {t("WhatsApp")} :
-                        </div>
-                        
-
-                        <div dir='ltr' className="text-[18px] text-[var(--text-color)]">
-                            +963 932 680 992
-                        </div>
-
-                        {/* <Copy text="+963 932 680 992" className="absolute -right-16 " /> */}
-                    </div>
-
-                    <div data-aos="fade-right" data-aos-delay="250" className="relative flex items-center justify-between p-6 rounded-lg bg-[var(--second-bg-color)]">
-                        <div className="title py-2 text-[22px] ">
-                            {t("Telegram")} :
-                        </div>
-                        
-                        <div dir='ltr' className="text-[18px] text-[var(--text-color)]">
-                            @abdullahasson
-                        </div>
-
-                        {/* <Copy text="@abdullahasson" className="absolute -right-16 " /> */}
-                    </div>
-
-                    <div data-aos="fade-right" data-aos-delay="350" className="relative flex items-center justify-between p-6 rounded-lg bg-[var(--second-bg-color)]">
-                        <div className="title py-2 text-[22px] ">
-                            {t("Email")} :
-                        </div>
-                        
-                        <div dir='ltr' className="text-[18px] text-[var(--text-color)]">
-                            bh532997@gmail.com
-                        </div>
-
-                        {/* <Copy text="bh532997@gmail.com" className="absolute -right-16 " /> */}
-                    </div>
-                </div>
-
+            <div className='flex flex-col justify-between items-center gap-10 px-6 mt-2 rounded-xl'>
                 <form
-                    ref={form}
-                    onSubmit={sendEmail}
-                    data-aos="fade-left"
+                    onSubmit={handleSubmit(onSubmit)}
                     className='w-[400px] text-center'
+                    data-aos='zoom-in'
                 >
                     <div className="flex-col flex">
-                        <input ref={name} className='w-full text-[1.6rem] text-[color:var(--text-color)] mx-0 my-[0.7rem] p-4 rounded-[0.8rem] bg-[var(--second-bg-color)]' required type="text" name="from_name" placeholder={t("inputName")} />
-                        <input ref={email} className='w-full text-[1.6rem] text-[color:var(--text-color)] mx-0 my-[0.7rem] p-4 rounded-[0.8rem] bg-[var(--second-bg-color)]' required type="email" name="from_email" placeholder={t("inputEmail")} />
+                        <input className='w-full text-[1.6rem] text-c2 mx-0 my-[0.7rem] p-4 bg-c4 rounded-md' type="text" id='from_name' {...register('from_name', { required: true })} placeholder={t("inputName")} />
+                        <input className='w-full text-[1.6rem] text-c2 mx-0 my-[0.7rem] p-4 bg-c4 rounded-md' type="email" id='from_email' {...register('from_email', {required: true})} placeholder={t("inputEmail")} />
                     </div>
 
-                    <textarea ref={message} className='bg-[var(--second-bg-color)] w-full text-[1.6rem] text-[color:var(--text-color)] resize-none mx-0 my-[0.7rem] p-6 rounded-[0.8rem]' required name="message" id cols={30} rows={10} placeholder={t("inputMessage")} defaultValue={""} />
-                    <input type="submit" value={t("send")} className="btn cursor-pointer mt-2" />
+                    <textarea className='bg-c4 w-full text-[1.6rem] text-c2 resize-none mx-0 my-[0.7rem] p-6 rounded-md' id='message' {...register('message' , {required: true})} cols={30} rows={10} placeholder={t("inputMessage")} defaultValue={""} />
+                    <input type="submit" value={t("send")} className="w-full p-4 rounded-md bg-c2 font-extrabold text-3xl cursor-pointer" />
                 </form>
+
+                <div>
+                    <a className="inline-flex cursor-pointer justify-center items-center w-16 h-16 bg-transparent border-c2 text-[2rem] text-c2 ml-0 mr-6 rounded-[50%] border-[0.2rem] border-solid hover:bg-c2 hover:text-c1" target="_blank" href="https://t.me/abdullahasson"><i className="bx bxl-telegram" /></a>
+                    <a className="inline-flex cursor-pointer justify-center items-center w-16 h-16 bg-transparent border-c2 text-[2rem] text-c2 ml-0 mr-6 rounded-[50%] border-[0.2rem] border-solid hover:bg-c2 hover:text-c1" target="_blank" href="https://wa.me/963932680992"><i className="bx bxl-whatsapp" /></a>
+                    <a className="inline-flex cursor-pointer justify-center items-center w-16 h-16 bg-transparent border-c2 text-[2rem] text-c2 ml-0 mr-6 rounded-[50%] border-[0.2rem] border-solid hover:bg-c2 hover:text-c1" target="_blank" href="https://github.com/abdullahasson"><i className='bx bxl-github' ></i></a>
+                </div>
             </div>
+
 
             <Toaster
                 toastOptions={{
