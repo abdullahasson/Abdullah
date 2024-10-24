@@ -1,3 +1,5 @@
+// react
+import { LazyLoadImage } from "react-lazy-load-image-component"
 // blur hash
 import { BlurhashCanvas } from "react-blurhash"
 
@@ -11,10 +13,13 @@ const ProjectCard = ({data}) => {
           href={data.projectDemo}
         ></a>
 
-        <img 
+
+        <LazyLoadImage
             src={data.img} 
             alt={`${data.title}-image`} 
             className="absolute z-0 left-0 top-0 w-full h-full transition-[2s] group-hover:scale-110 group-hover:-rotate-2" 
+            delayMethod="debounce"
+            delayTime="100"
         />
         <BlurhashCanvas
             hash={data.hash}

@@ -2,6 +2,7 @@
 import { TypeAnimation } from "react-type-animation"
 import { useTranslation } from "react-i18next";
 import { BlurhashCanvas } from "react-blurhash"
+import { LazyLoadImage } from "react-lazy-load-image-component"
 // cookies
 import cookies from "js-cookie"
 // images
@@ -15,7 +16,14 @@ function Home() {
     return (
         <section className="flex justify-between items-center max-[768px]:flex-col relative" id="home">
             <div className="bg absolute top-0 left-0 -z-10 w-full h-screen opacity-[0.2] pointer-events-none">
-                <img src={HomePhoto.bg} alt="bg" className="w-full"/>
+                <LazyLoadImage
+                    id='bg'
+                    alt='bg'
+                    src={HomePhoto.bg}
+                    className="w-full"
+                    delayMethod="debounce"
+                    delayTime="100"
+                />
                 <BlurhashCanvas
                     hash={HomePhoto.bgHash}
                     className="absolute left-0 top-0 w-full h-full -z-10"
@@ -63,10 +71,12 @@ function Home() {
                     className="absolute left-0 top-0 w-full h-full rounded-[16px] -z-10"
                 />
                 <span className={`absolute w-full h-full -z-20 rounded-[16px] ${lng=='ar' ? '-right-14 -top-14': '-left-14 -bottom-14'} border-[4px] border-c3 border-solid`}></span>
-                <img 
-                    className="w-full h-full rounded-[16px] z-10" 
-                    src={HomePhoto.myphoto} 
-                    alt='my-photo' 
+                <LazyLoadImage
+                    alt='my-photo'
+                    src={HomePhoto.myphoto}
+                    className="w-full h-full rounded-[16px] z-10"
+                    delayMethod="debounce"
+                    delayTime="100"
                     data-aos='zoom-in'
                     data-aos-delay="300" 
                 />

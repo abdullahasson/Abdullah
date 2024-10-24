@@ -2,10 +2,11 @@ const CardContainer = ({
     data,
     resourceName,
     card: Card,
+    columnsNumber = 2
 }) => {
 
   return (
-    <div className={`grid grid-cols-2 gap-10`}>
+    <div className={`grid gap-10`} style={{gridTemplateColumns: `repeat(${columnsNumber}, minmax(0, 1fr))`}}>
         {
             data.map((item , i) => (
                 <div className=""  key={i}>

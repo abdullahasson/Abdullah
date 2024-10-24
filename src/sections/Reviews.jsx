@@ -21,56 +21,26 @@ const Reviews = () => {
       clientPhoto: projectsPhoto.brainwave, 
       clientName: 'Ahmed alsaleh', 
       clientCarrer: 'manager of hubqoute', 
-      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, eos deserunt quia deleniti iusto nobis velit doloremque eligendi, magni aut praesentium reprehenderit maxime asperiores? Consectetur repellendus fuga officiis aut molestiae.'
-    },
+      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit temporibus aut obcaecati labore libero, perspiciatis eaque, dolorem, aliquam quis accusamus quia aperiam quos iusto assumenda doloremque vitae dolorum dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit temporibus aut obcaecati labore libero, perspiciatis eaque, dolorem, aliquam quis accusamus quia aperiam quos iusto assumenda doloremque vitae dolorum dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit temporibus aut obcaecati labore libero, perspiciatis eaque, dolorem, aliquam quis accusamus quia aperiam quos iusto assumenda doloremque vitae dolorum dolor.'
+    } ,
     {
       clientPhoto: projectsPhoto.brainwave, 
       clientName: 'Ahmed alsaleh', 
       clientCarrer: 'manager of hubqoute', 
-      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, eos deserunt quia deleniti iusto nobis velit doloremque eligendi, magni aut praesentium reprehenderit maxime asperiores? Consectetur repellendus fuga officiis aut molestiae.'
-    },
+      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit temporibus aut obcaecati labore libero, perspiciatis eaque, dolorem, aliquam quis accusamus quia aperiam quos iusto assumenda doloremque vitae dolorum dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit temporibus aut obcaecati labore libero, perspiciatis eaque, dolorem, aliquam quis accusamus quia aperiam quos iusto assumenda doloremque vitae dolorum dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit temporibus aut obcaecati labore libero, perspiciatis eaque, dolorem, aliquam quis accusamus quia aperiam quos iusto assumenda doloremque vitae dolorum dolor.'
+    } ,
     {
       clientPhoto: projectsPhoto.brainwave, 
       clientName: 'Ahmed alsaleh', 
       clientCarrer: 'manager of hubqoute', 
-      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, eos deserunt quia deleniti iusto nobis velit doloremque eligendi, magni aut praesentium reprehenderit maxime asperiores? Consectetur repellendus fuga officiis aut molestiae.'
-    },
+      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit temporibus aut obcaecati labore libero, perspiciatis eaque, dolorem, aliquam quis accusamus quia aperiam quos iusto assumenda doloremque vitae dolorum dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit temporibus aut obcaecati labore libero, perspiciatis eaque, dolorem, aliquam quis accusamus quia aperiam quos iusto assumenda doloremque vitae dolorum dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit temporibus aut obcaecati labore libero, perspiciatis eaque, dolorem, aliquam quis accusamus quia aperiam quos iusto assumenda doloremque vitae dolorum dolor.'
+    } ,
     {
       clientPhoto: projectsPhoto.brainwave, 
       clientName: 'Ahmed alsaleh', 
       clientCarrer: 'manager of hubqoute', 
-      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, eos deserunt quia deleniti iusto nobis velit doloremque eligendi, magni aut praesentium reprehenderit maxime asperiores? Consectetur repellendus fuga officiis aut molestiae.'
-    },
-    {
-      clientPhoto: projectsPhoto.brainwave, 
-      clientName: 'Ahmed alsaleh', 
-      clientCarrer: 'manager of hubqoute', 
-      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, eos deserunt quia deleniti iusto nobis velit doloremque eligendi, magni aut praesentium reprehenderit maxime asperiores? Consectetur repellendus fuga officiis aut molestiae.'
-    },
-    {
-      clientPhoto: projectsPhoto.brainwave, 
-      clientName: 'Ahmed alsaleh', 
-      clientCarrer: 'manager of hubqoute', 
-      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, eos deserunt quia deleniti iusto nobis velit doloremque eligendi, magni aut praesentium reprehenderit maxime asperiores? Consectetur repellendus fuga officiis aut molestiae.'
-    },
-    {
-      clientPhoto: projectsPhoto.brainwave, 
-      clientName: 'Ahmed alsaleh', 
-      clientCarrer: 'manager of hubqoute', 
-      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, eos deserunt quia deleniti iusto nobis velit doloremque eligendi, magni aut praesentium reprehenderit maxime asperiores? Consectetur repellendus fuga officiis aut molestiae.'
-    },
-    {
-      clientPhoto: projectsPhoto.brainwave, 
-      clientName: 'Ahmed alsaleh', 
-      clientCarrer: 'manager of hubqoute', 
-      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, eos deserunt quia deleniti iusto nobis velit doloremque eligendi, magni aut praesentium reprehenderit maxime asperiores? Consectetur repellendus fuga officiis aut molestiae.'
-    },
-    {
-      clientPhoto: projectsPhoto.brainwave, 
-      clientName: 'Ahmed alsaleh', 
-      clientCarrer: 'manager of hubqoute', 
-      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, eos deserunt quia deleniti iusto nobis velit doloremque eligendi, magni aut praesentium reprehenderit maxime asperiores? Consectetur repellendus fuga officiis aut molestiae.'
-    },
+      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit temporibus aut obcaecati labore libero, perspiciatis eaque, dolorem, aliquam quis accusamus quia aperiam quos iusto assumenda doloremque vitae dolorum dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit temporibus aut obcaecati labore libero, perspiciatis eaque, dolorem, aliquam quis accusamus quia aperiam quos iusto assumenda doloremque vitae dolorum dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit temporibus aut obcaecati labore libero, perspiciatis eaque, dolorem, aliquam quis accusamus quia aperiam quos iusto assumenda doloremque vitae dolorum dolor.'
+    } ,
   ]
 
   return (
@@ -79,7 +49,6 @@ const Reviews = () => {
             text={t('reviewsTitle')}
             seconderyText={t('reviewsText')}
         />
-
 
         <div className="mt-28">
           <CardContainer
