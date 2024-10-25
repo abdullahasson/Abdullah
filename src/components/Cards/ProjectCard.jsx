@@ -13,13 +13,10 @@ const ProjectCard = ({data}) => {
           href={data.projectDemo}
         ></a>
 
-
         <LazyLoadImage
             src={data.img} 
             alt={`${data.title}-image`} 
             className="absolute z-0 left-0 top-0 w-full h-full transition-[2s] group-hover:scale-110 group-hover:-rotate-2" 
-            delayMethod="debounce"
-            delayTime="100"
         />
         <BlurhashCanvas
             hash={data.hash}
@@ -27,7 +24,7 @@ const ProjectCard = ({data}) => {
         /> 
 
 
-        <div className="z-10 text-xl absolute bottom-0 left-0 pb-8 pl-8 bg-gradient-to-t from-slate-900 from-0% via-slate-700 via-50% to-transparent to-100% ">
+        <div className="z-10 text-xl w-full absolute bottom-0 left-0 pb-8 pl-8 bg-gradient-to-t from-slate-900 from-0% via-slate-700 via-50% to-transparent to-100% ">
             <h3 className="text-5xl font-extrabold mb-3">{data.title}</h3>
             <p className='txt text-[16px] w-5/6 text-start m-0 p-0'>{data.text}</p>
         </div>

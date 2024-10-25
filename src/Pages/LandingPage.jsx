@@ -4,7 +4,7 @@ import Header from '../components/Header'
 import Home from '../sections/Home'
 import Expertise from '../sections/Expertise'
 import Projects from '../sections/Projects'
-import Reviews from '../sections/Reviews'
+// import Reviews from '../sections/Reviews'
 import Contact from '../sections/Contact'
 import Footer from '../sections/Footer'
 
@@ -18,9 +18,9 @@ function LandingPage() {
             <Expertise />
             <hr />
             <Projects />
-            {/* <hr />
-            <Reviews /> */}
             <hr />
+            {/* <Reviews />
+            <hr /> */}
             <Contact /> 
             <hr />
             <Footer />

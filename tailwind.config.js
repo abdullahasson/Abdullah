@@ -36,7 +36,7 @@ export default {
         },
 
         "section": {
-          "@apply min-h-[100vh] pt-[10rem] px-64 pb-[5rem]": {},
+          "@apply min-h-[100vh] pt-[10rem] px-64 pb-[5rem] max-[560px]:px-10 max-[767px]:px-10": {},
         },
 
         "hr": {

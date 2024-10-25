@@ -16,8 +16,6 @@ const ReviewsCard = ({ data }) => {
                     src={data.clientPhoto} 
                     alt={data.clientPhoto} 
                     className="rounded-full w-32 h-32"
-                    delayMethod="debounce"
-                    delayTime="100"
                 />
                 <div className="text-start">
                     <h3 className="font-bold text-4xl mb-2">{data.clientName}</h3>

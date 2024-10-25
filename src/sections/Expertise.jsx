@@ -65,7 +65,7 @@ function Expertise() {
                 seconderyText={t('expertiseText')}
             />
 
-            <div dir='ltr' className="flex justify-between items-center pt-14 gap-12">
+            <div dir='ltr' className="flex justify-between items-center pt-14 gap-12 max-[767px]:px-10">
                 {["react" , "redux" , "javascript" , "html5" , "css3"].map((item , index) => (
                     <div key={index} className="text-center" data-aos="fade-up" data-aos-delay={`${index + 1}00`}>
                         <i className={`bx bxl-${item} text-c2 text-9xl`} />
@@ -74,15 +74,15 @@ function Expertise() {
                 ))}
             </div>
 
-            <h2 className="font-bold text-5xl pt-16" data-aos='fade-up'>
+            <h2 className="font-bold text-5xl pt-16 max-[560px]:text-center max-[560px]:text-3xl" data-aos='fade-up'>
                 {t('expertiseListTitle')}
             </h2>
 
-            <div dir="ltr" className="border-2 border-c3 border-solid divide-y-[0.5px] rounded-xl divide-solid flex flex-col mt-16 w-11/12">
+            <div dir="ltr" className="border-2 border-c3 border-solid divide-y-[0.5px] rounded-xl divide-solid flex flex-col mt-16 max-[767px]:mt-10 w-11/12 max-[767px]:w-full">
                 {
                     technologie.map((item , index) => (
-                        <div className="px-6 py-7 flex items-center justify-between" key={item.name} data-aos="fade-up">
-                            <h2 className="text-4xl">{item.name}</h2>
+                        <div className="px-6 py-7 flex items-center justify-between max-[767px]:flex-col max-[767px]:py-4" key={item.name} data-aos="fade-up">
+                            <h2 className="text-4xl max-[767px]:mb-2">{item.name}</h2>
 
                             <div className="flex text-2xl txt p-0">
                                 {item.technologies}

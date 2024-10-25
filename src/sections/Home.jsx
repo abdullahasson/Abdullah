@@ -14,15 +14,13 @@ function Home() {
     const lng = cookies.get("i18next")
 
     return (
-        <section className="flex justify-between items-center max-[768px]:flex-col relative" id="home">
-            <div className="bg absolute top-0 left-0 -z-10 w-full h-screen opacity-[0.2] pointer-events-none">
+        <section className="flex justify-between items-center max-[768px]:flex-col relative min-[767px]:px-64" id="home">
+            <div className="bg absolute top-0 left-0 -z-10 w-full h-screen opacity-[0.2] pointer-events-none max-[767px]:hidden">
                 <LazyLoadImage
                     id='bg'
                     alt='bg'
                     src={HomePhoto.bg}
                     className="w-full"
-                    delayMethod="debounce"
-                    delayTime="100"
                 />
                 <BlurhashCanvas
                     hash={HomePhoto.bgHash}
@@ -36,7 +34,7 @@ function Home() {
 
                 <h1 className="text-[5.6rem] font-bold leading-[1.3]  max-[500px]:text-[2.5rem]">{t("name")}</h1>
 
-                <h3 className="mb-8 text-[3.2rem] font-bold  max-[500px]:text-[2rem]">{t("And")}{" "}
+                <h3 className="mb-8 text-[3.2rem] font-bold  max-[500px]:text-[2rem] max-[560px]:mb-4">{t("And")}{" "}
                     <TypeAnimation
                         sequence={[
                             'Front End Developer',
@@ -53,7 +51,7 @@ function Home() {
                     />
                 </h3>
 
-                <p className="txt text-start p-0 w-[57%] text-4xl leading-snug">
+                <p className="txt text-start p-0 w-[57%] text-4xl leading-snug max-[767px]:text-center max-[767px]:w-11/12 max-[767px]:mx-auto">
                     {t("where and age")}
                 </p>
 
@@ -75,14 +73,12 @@ function Home() {
                     alt='my-photo'
                     src={HomePhoto.myphoto}
                     className="w-full h-full rounded-[16px] z-10"
-                    delayMethod="debounce"
-                    delayTime="100"
                     data-aos='zoom-in'
                     data-aos-delay="300" 
                 />
             </div>
 
-            <a href="#expertise" className="absolute left-1/2 bottom-7 -translate-x-1/2 text-[4rem] text-c2">
+            <a href="#expertise" className="absolute left-1/2 bottom-7 -translate-x-1/2 text-[4rem] text-c2 max-[560px]:bottom-0">
                 <i className='bx bx-chevrons-down'></i>
             </a>
         </section>

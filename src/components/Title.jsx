@@ -22,7 +22,7 @@ const Title = ({ text , seconderyText }) => {
             </div>
             
             <div className="mt-4">
-                <p className="text-c3 text-center pt-11 text-5xl font-normal leading-[1.2]" data-aos='fade-up'> 
+                <p className="text-c3 text-center pt-11 text-5xl font-normal leading-[1.2] max-[560px]:text-2xl max-[560px]:pt-5 max-[767px]:pt-4" data-aos='fade-up'> 
                     {seconderyText}
                 </p>
             </div>

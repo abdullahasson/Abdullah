@@ -6,7 +6,7 @@ const CardContainer = ({
 }) => {
 
   return (
-    <div className={`grid gap-10`} style={{gridTemplateColumns: `repeat(${columnsNumber}, minmax(0, 1fr))`}}>
+    <div className={`grid ${columnsNumber == 2 ? 'grid-cols-2 max-[560px]:grid-cols-1' : 'grid-cols-1'} gap-10`}>
         {
             data.map((item , i) => (
                 <div className=""  key={i}>
