@@ -27,6 +27,19 @@ section {
   overflow: hidden !important;
 }
 
+::-webkit-scrollbar-track {
+  background-color: var(--bg-color);
+}
+::-webkit-scrollbar-button {
+  background-color: #0ef;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #0ef;
+}
+::-webkit-scrollbar {
+  width: 4px;
+}
+
 .image-animation {
   top: 0
 }

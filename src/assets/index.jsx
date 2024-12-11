@@ -5,6 +5,7 @@ import MyPhoto from "./image/MyPhoto.png"
 import HooBank from "./image/HooBank.png"
 import BrainWave from "./image/brainwave.png"
 import Hubqoute from "./image/hubqoute.jpg"
+import GoZagel from "./image/ogg.png"
 
 
 export const HomePhoto = {
@@ -18,11 +19,13 @@ export const HomePhoto = {
 
 export const projectsPhoto = {
     hoobank: HooBank,
+    gozagel: GoZagel,
     brainwave: BrainWave,
     hubqoute: Hubqoute,
     
     // Hashs
     hoobankHash: "|66*%W4T.9M|%Mg5xuIA-=?w9Ex]o#V?o3kAWCoztQW?jEt7bIRjkDi_V@R4bckCozt8MdtRozaet7bHe:jEo#RjoLozV?%gRPNGoft7WCV?o}WBx]a#aKjFbaX8V@j@WBxaRjk9ogV@oLWBbbkWx]RPoMofV@t7RjjZkC",
+    gozagelHash: "|66*%W4T.9M|%Mg5xuIA-=?w9Ex]o#V?o3kAWCoztQW?jEt7bIRjkDi_V@R4bckCozt8MdtRozaet7bHe:jEo#RjoLozV?%gRPNGoft7WCV?o}WBx]a#aKjFbaX8V@j@WBxaRjk9ogV@oLWBbbkWx]RPoMofV@t7RjjZkC",
     brainwaveHash: "|47dkA-;0x-p~C4.0K-VxED%M{NGt7n%WBofWAae0K-;~DE10d%2-VD%Iox]of$+ozx]oMM_axf,=yR%55jE-VIoIp%1xaVrt7yDoLMdoekXRjRP9ZRP%1RkS2-p%3IoWB%gaeMdt7o~M{i_%MbcRiM{Rjxaj[NHt6%2R+",
-    hubqouteHash: "|6RW6ttL%0E1-;xuRlE2oztSt8xZR*tQsqofNGM|-?s;oc-:InRjV@xus:~paIIp%LMxo#R*s:%1xAWBbci_sDozbEWC%1-o%MR*n#oNM{W=j=s+tPkCIVxbxuM_fk%2Ri-=V[V?%M%1IoRjkBoztRRiRnfNInkCada}t7"
+    hubqouteHash: "|6RW6ttL%0E1-;xuRlE2oztSt8xZR*tQsqofNGM|-?s;oc-:InRjV@xus:~paIIp%LMxo#R*s:%1xAWBbci_sDozbEWC%1-o%MR*n#oNM{W=j=s+tPkCIVxbxuM_fk%2Ri-=V[V?%M%1IoRjkBoztRRiRnfNInkCada}t7",
 }
